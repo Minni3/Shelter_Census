@@ -1,0 +1,21 @@
+#Name: Sandra Garcia
+#Email: sandra.garcia15@myhunter.cuny.edu
+#Date: March 29, 2022
+#Programming Assignment: Shelter Census
+
+
+import pandas as pd
+
+import matplotlib.pyplot as plt
+
+input_name = input("Enter name: of input file ")
+
+output_name = input("Enter name of output file: ")
+
+homeless = pd.read_csv(input_name)
+
+homeless.plot(x = "Date of Census", y = "Total Individuals in Shelter")
+
+plt.savefig(output_name)
+
+plt.show()
